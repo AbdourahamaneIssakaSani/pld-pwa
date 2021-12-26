@@ -1,0 +1,60 @@
+.bg-pld-transparent {
+  background-color: transparent;
+  .nav-link,
+  .navbar-toggler {
+    color: #2c7bcb;
+  }
+}
+
+.bg-pld-primary {
+  background-color: #2c7bcb;
+  .nav-link,
+  .navbar-toggler {
+    color: black;
+  }
+}
+
+.navbar {
+  .navbar-brand {
+    img {
+      width: 2.5rem;
+    }
+    .pld-full-name {
+      font-size: 1rem;
+    }
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 2.2rem;
+      }
+      .pld-full-name {
+        font-size: 3.5vw;
+      }
+    }
+    .nav-link {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .navbar {
+    .nav-link {
+      font-size: 0.7rem;
+    }
+    .mat-icon-button {
+      width: 21px;
+    }
+  }
+}
