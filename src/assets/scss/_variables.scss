@@ -1,0 +1,24 @@
+$pld-primary: #1b6dc1;
+$pld-secondary: white;
+
+@keyframes move-left-right {
+  0% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@mixin linear-gradient($color, $states-color) {
+  background: $color;
+  background: -webkit-linear-gradient(0deg, $color 0%, $states-color 100%);
+  background: -o-linear-gradient(0deg, $color 0%, $states-color 100%);
+  background: -moz-linear-gradient(0deg, $color 0%, $states-color 100%);
+  background: linear-gradient(0deg, $color 0%, $states-color 100%);
+}

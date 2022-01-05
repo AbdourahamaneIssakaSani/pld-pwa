@@ -1,3 +1,4 @@
+@import "../../../assets/scss/_variables.scss";
 .page-header {
   height: 100vh;
   min-height: 100vh;
@@ -18,7 +19,7 @@
         max-width: 880px;
         .h1-seo,
         h3 {
-          color: #2c7bcb;
+          color: $pld-primary;
           /* span {
               font-weight: $font-weight-bold;
             } */
@@ -39,7 +40,7 @@
 
 .squares {
   animation: move-left-right 1s infinite;
-  background: linear-gradient(#0763be, #2c7bcb);
+  background: linear-gradient(#0763be, $pld-primary);
   position: absolute;
   transition: 0.5s ease-out;
   overflow: hidden;
@@ -184,18 +185,4 @@
   left: 300px;
   top: 400px;
   opacity: 0.4;
-}
-
-@keyframes move-left-right {
-  0% {
-    transform: translateX(-10px);
-  }
-
-  50% {
-    transform: translateX(10px);
-  }
-
-  100% {
-    transform: translateX(-10px);
-  }
 }
