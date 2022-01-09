@@ -1,3 +1,5 @@
+import { FooterComponent } from './components/footer/footer.component';
+import { MainComponent } from './components/main/main.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +14,9 @@ import { HeaderComponent } from './components/header/header.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

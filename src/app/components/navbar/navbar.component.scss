@@ -7,6 +7,14 @@
   .navbar-toggler {
     color: $pld-primary; //rgba(27,109,193,255)
   }
+  .navbar-collapse.show {
+    background-image: linear-gradient(transparent, white);
+    margin-right: 13px;
+  }
+  /* .nav-link:hover {
+    border-bottom: 2px solid #1b6dc1;
+    border-width: 80%;
+  } */
   .logo-pld {
     content: url(/../assets/img/logo-pld-primary.png);
     max-width: 40px;
@@ -42,6 +50,9 @@
   }
   .nav-link {
     font-size: 1rem;
+    &:hover {
+      font-weight: 600;
+    }
   }
   .navbar-toggler {
     padding-left: 0;
@@ -60,7 +71,23 @@
   left: auto;
   border-radius: 20px;
 }
-
+.navbar-nav {
+  .dropdown {
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover {
+          border-radius: 15px;
+          font-weight: 600;
+        }
+        i,
+        span {
+          color: $pld-primary;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
 .pgm {
   content: url(../../../assets/img/pld-pgm.jpg);
   max-width: 100%;
@@ -171,6 +198,20 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    .dropdown {
+      .dropdown-menu {
+        .dropdown-item {
+          padding-left: 0;
+          i {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 991px) {
   .dropdown-large {
     position: relative;
@@ -178,6 +219,7 @@
     top: auto;
   }
 }
+
 @media screen and (min-width: 992px) {
   .dropdown-large {
     min-width: 30rem;
