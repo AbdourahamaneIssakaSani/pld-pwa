@@ -9,7 +9,7 @@ const app = express();
 // });
 
 app.use(express.static("dist/pld-pwa"));
-app.get("*", function (req, res) {
+app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "dist/pld-pwa", "index.html"));
 });
 
