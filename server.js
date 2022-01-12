@@ -1,14 +1,14 @@
-//Install express server
 const express = require("express");
-
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static("./dist/pld-pwa"));
+app.use(express.static(__dirname + "/dist/pld-pwa"));
 
-app.get("/*", (req, res) =>
-  res.sendFile("index.html", { root: "dist/pld-pwa/" })
-);
+app.all("*", (req, res) => {
+  res.status(200).sendFile(__dirname + "/dist/pld-pwa/index.html");
+});
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+port = 8080;
+
+app.listen(port, () => {
+  console.log(`Our API is running on ${port}`);
+});
