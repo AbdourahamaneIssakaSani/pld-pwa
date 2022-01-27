@@ -1,5 +1,10 @@
+import { JoinUsComponent } from './components/join-us/join-us.component';
+import { EssenceComponent } from './components/essence/essence.component';
+import { CommunityComponent } from './components/community/community.component';
+import { ActivitesComponent } from './components/activites/activites.component';
+import { HistoricComponent } from './components/historic/historic.component';
+import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainComponent } from './components/main/main.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,8 +20,13 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     NavbarComponent,
     HeaderComponent,
-    MainComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    HistoricComponent,
+    ActivitesComponent,
+    CommunityComponent,
+    EssenceComponent,
+    JoinUsComponent
   ],
   imports: [
     BrowserModule,
