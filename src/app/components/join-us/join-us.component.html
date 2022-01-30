@@ -1,1 +1,69 @@
-<p>join-us works!</p>
+<section class="container">
+    <div class="row">
+        <div class="mt-5 mb-5">
+            <form action="" method="POST">
+                <span class="text-danger">
+                    * Obligatoire
+                </span>
+                <fieldset>
+                    <legend>Vous</legend>
+                    <label class="question" for="genre">
+                        Genre <span class="text-danger">*</span> :
+                    </label>
+                    <div class="form-check">
+                        <label class="container-input">F&eacute;minin
+                            <input type="radio" value="féminin" required name="genre">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-input">Masculin
+                            <input type="radio" value="masculin" required name="genre">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <label class="question" for="age">
+                        Age <span class="text-danger">*</span> :
+                    </label>
+                    <select class="form-control" name="age" required id="">
+                        <option value="" disabled selected hidden>Choisir</option>
+                        <option value="17-20">17-20</option>
+                        <option value="21-24">21-24</option>
+                        <option value="25-29">25-29</option>
+                        <option value="30-34">30-34</option>
+                        <option value="35-39">35-39</option>
+                        <option value="40-44">40-44</option>
+                        <option value="45-49">45-49</option>
+                        <option value="50-54">50-54</option>
+                        <option value="55-59">55-59</option>
+                        <option value="60-64">60-64</option>
+                        <option value="65-69">65-69</option>
+                        <option value="70-74">70-74</option>
+                        <option value="75+">75 +</option>
+                    </select>
+                    <div class="form-group">
+                        <label class="question" for="region">
+                            Votre r&eacute;gion
+                            <span class="text-danger">*</span> :
+                        </label>
+                        <div>
+                            <select class="form-control" required name="region" id="">
+                                <option value="" disabled selected hidden>Choisir</option>
+                                <option value="Agadez">Agadez</option>
+                                <option value="Diffa">Diffa</option>
+                                <option value="Dosso">Dosso</option>
+                                <option value="Maradi">Maradi</option>
+                                <option value="Niamey">Niamey</option>
+                                <option value="Tahoua">Tahoua</option>
+                                <option value="Tillaberi">Tillaberi</option>
+                                <option value="Zinder">Zinder</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button class="btn" type="reset"> Effacer</button>
+                <button class="btn btn-common" type="submit">Soumettre</button>
+
+            </form>
+        </div>
+    </div>
+</section>
