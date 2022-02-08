@@ -6,8 +6,9 @@
         Programme Leadership & Développement
       </div>
     </a>
-    <button class="navbar-toggler ps-0 pe-0" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="navigation" class="navbar-toggler ps-0 pe-0" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" aria-label="Toggle navigation">
       <span><i class="bi bi-list"></i></span>
     </button>
     <div class="collapse p-md-4 p-lg-2 navbar-collapse justify-content-xl-evenly" id="navbarSupportedContent">
@@ -25,8 +26,9 @@
               </a>
             </div>
             <div class="col-2 pe-1 collapse-close text-end">
-              <button class="navbar-toggler ps-0 pe-0" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
+              <button id="close-menu" class="navbar-toggler ps-0 pe-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                [attr.aria-expanded]="!isCollapsed">
                 <i class="bi bi-x"></i>
               </button>
             </div>
@@ -46,7 +48,7 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLink="">Accueil</a>
+          <a class="nav-link" (click)="closeMenu()" routerLink="">Accueil</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -64,31 +66,31 @@
                     <!-- <h6 class="title">BIENVENUE</h6> -->
                     <ul class="list-unstyled">
                       <li>
-                        <a class="dropdown-item" routerLink="historique">
+                        <a class="dropdown-item" (click)="closeMenu()" routerLink="historique">
                           <i class="bi bi-pin-map-fill"></i>
                           <span>Historique</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" routerLink="activités">
+                        <a class="dropdown-item" (click)="closeMenu()" routerLink="activités">
                           <i class="bi bi-card-checklist"></i>
                           <span>Activités</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" routerLink="communauté">
+                        <a class="dropdown-item" (click)="closeMenu()" routerLink="communauté">
                           <i class="bi bi-people"></i>
                           <span>Communauté</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" routerLink="essence">
+                        <a class="dropdown-item" (click)="closeMenu()" routerLink="essence">
                           <i class="bi bi-stars"></i>
                           <span>L'Essence du PLD</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" routerLink="nous-rejoindre">
+                        <a class="dropdown-item" (click)="closeMenu()" routerLink="nous-rejoindre">
                           <i class="bi bi-person-plus"></i>
                           <span>Nous rejoindre</span>
                         </a>

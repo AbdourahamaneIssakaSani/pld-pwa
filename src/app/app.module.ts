@@ -1,3 +1,4 @@
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { JoinUsComponent } from './components/join-us/join-us.component';
 import { EssenceComponent } from './components/essence/essence.component';
 import { CommunityComponent } from './components/community/community.component';
@@ -34,7 +35,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
